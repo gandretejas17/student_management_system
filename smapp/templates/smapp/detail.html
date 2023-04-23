@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="https://www.pngitem.com/pimgs/m/256-2561787_graduation-hat-student-management-system-hd-png-icons.png" width="30" height="30" class="d-inline-block align-top" alt="">&nbsp;
+      Student Management System
+      <div>
+        <a href="/student/add/" style="color: aliceblue;">Add Student</a>&nbsp;&nbsp;
+        <a href="/student/list/" style="color: aliceblue;">Student List</a>&nbsp;&nbsp;
+        <a href="/logout/" style="color: aliceblue;">Logout</a>
+  
+      </div>
+    </a>
+  </nav>
+    <br>
+    <div class="container">
+        <h1>{{obj.name}} Details</h1>
+        <hr>
+        <h3>Student Name : {{obj.name}}</h3>
+        <h3>Student Marks : {{obj.marks}}</h3>
+        <h3>Student Roll No : {{obj.roll_num}}</h3>
+
+        <br><img src="{{obj.image.url}}" alt="" height="100px" width="100px"><br><br>
+        <a href="{{obj.image.url}}">Check Image</a><br>
+        
+        <hr>
+        <div class="container" style="text-align: center;">
+            <a href="/student/update/{{obj.id}}/" class="btn btn-warning">Update</a>&nbsp;&nbsp;
+            <a href="/student/delete/{{obj.id}}/" class="btn btn-danger">Delete</a>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
